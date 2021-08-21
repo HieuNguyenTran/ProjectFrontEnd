@@ -1,0 +1,62 @@
+.containers {
+    padding: 100px;
+}
+.containers .contact_area .address .fas{
+    color: #2FA1B3;
+}
+.containers .contact_area .address h4, h6{
+    color: #2FA1B3;
+    font-weight: bold;
+}
+.containers .contact_area .address p{
+    color: #111;
+    padding: 0px 50px 0px 30px;
+}
+.containers .contact_area .contact-form {
+    padding: 0px 0px 0px 30px;
+    margin-top: 50px;
+}
+.containers .contact_area .contact-form #user,#email,#phone,#company,#title,#t_content {
+    -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.11);
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.11);
+    border: none;
+    margin-bottom: 40px;
+    height: 100%;
+    padding: 10px;
+}
+.containers .contact_area .contact-form .alpha #user{
+    float: left;
+    width: 14rem ;
+    
+}
+.containers .contact_area .contact-form .alpha #email{
+    float: right;
+    width: 31rem;
+    
+}
+.containers .contact_area .contact-form .beta #phone{
+    float: left;
+    width: 14rem;
+    
+}
+.containers .contact_area .contact-form .beta #company{
+    float: right;
+    width: 31rem;
+    margin-left: 20px;
+   
+}
+.containers .contact_area .contact-form .clear {
+  clear: both;
+}
+
+.containers .contact_area .contact-form .lamda #btn_Send{
+    background-image: linear-gradient(to right, #287884, #40D2E9);
+    margin: 20px auto auto auto;
+    border-radius: 70px;
+    width: 200px;
+    color: white;
+    display: block;
+}
+.containers .map_area{
+    margin-top: 50px;
+}
