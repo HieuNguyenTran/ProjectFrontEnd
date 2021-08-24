@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Data_RSS } from '../Data_RSS';
+import { Data_Crawl } from '../Data_Crawl';
+
 
 @Component({
   selector: 'app-detailed-news',
@@ -7,7 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailedNewsComponent implements OnInit {
 
-  constructor() { }
+  dataNew: any[]=[];
+  dataPopu: any[]=[];
+  dataNeed: any[]=[];
+  dataNews: any[]=[];
+
+
+  constructor(private data_R: Data_RSS, private data_C: Data_Crawl) { 
+    
+  }
 
   ngOnInit(): void {
   }
