@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 
 import { DetailedNewsComponent } from './detailed-news/detailed-news.component';
 import { ContactComponent } from './contact/contact.component';
+import { Data_RSS } from './Data_RSS';
+import { Data_Crawl } from './Data_Crawl';
 
 
 @NgModule({
@@ -24,7 +26,10 @@ import { ContactComponent } from './contact/contact.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    Data_RSS,
+    Data_Crawl
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
