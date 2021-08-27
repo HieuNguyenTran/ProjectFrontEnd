@@ -1,0 +1,23 @@
+<div class="container pb-4">
+    <div class="row justify-content-center" >
+     <div class="col-auto">
+      <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item ">
+              <a (click) = "getListItemPrevious()" class="page-link px-3" style="cursor: pointer;" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li style="cursor: pointer;"  *ngFor="let pageSize of pageSize$ |async " class="page-item"><a class="page-link linkPaginator" (click) = "changePage(pageSize)">{{pageSize}}</a></li>
+           
+            <li class="page-item">
+              <a (click) = "getListItemNext()" class="page-link px-3" style="cursor: pointer;" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+     </div>
+
+    </div>
+</div>
