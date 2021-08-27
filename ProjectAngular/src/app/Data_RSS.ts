@@ -36,4 +36,9 @@ export class Data_RSS {
      console.log(re);
          return re;
   }
+  getParam(link: String): String{
+    let res = link.split("net/"+"",2);
+    
+    return res[1];
+  }
 }
