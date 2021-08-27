@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { PolicyComponent } from './policy/policy.component';
+
+import { DetailedNewsComponent } from './detailed-news/detailed-news.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'detailNews', pathMatch: 'full' },
+    
+ { path: 'detailNews/:name', component: DetailedNewsComponent },
+ { path: 'as', component: ContactComponent }
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
