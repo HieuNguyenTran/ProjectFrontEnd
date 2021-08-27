@@ -11,20 +11,20 @@ export class Data_Crawl {
   baseUrl = 'https://cors-anywhere.herokuapp.com/https://vnexpress.net/';
   configUrl = 'https://cors-anywhere.herokuapp.com/https://vnexpress.net/ha-noi-cung-cap-luong-thuc-thuc-pham-cho-lao-dong-ngheo-4334039.html';
 name ="";
-  constructor(private http: HttpClient,private route: ActivatedRoute) {
-    route.params.subscribe(params => { this.name = params['name']; });
+  constructor(private http: HttpClient) {
+   
   }
  
-  getData(url: string, header: object = {responseType: 'text'} ):any[] {
+  getData(name: string, header: object = {responseType: 'text'} ):any[] {
     let data: any[]= [];
-    this.http.get(this.baseUrl+this.name, header)
+    this.http.get(this.baseUrl+name, header)
     .subscribe(value => {
     
        const $ = cheerio.load(value+""); // Load the HTML string into cheerio
        /* Lấy tên và miêu tả của tutorial*/
-       const date = $(".metadate").text().trim();
-       const title = $(".title_news_detail").text().trim();
-       const description = $(".short_intro").text().trim();
+       const date = $(".date").text().trim();
+       const title = $(".title-detail").text().trim();
+       const description = $(".description").text().trim();
        const content = $(".fck_detail").html();
        const author = $(".author_mail").html();
       
