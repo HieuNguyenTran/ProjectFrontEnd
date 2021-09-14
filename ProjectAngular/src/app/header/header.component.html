@@ -6,19 +6,19 @@
                 <p class="title-article"> Tin tức 24H</p>
             </div>
             <div class="col-6">
-                <input type="text" class="form-control" style="width: 100%; border-radius: 15px;" name="" id="" placeholder="Nội dung tìm  kiếm.......">
+                <input type="text" class="form-control color-white" style="width: 100%; border-radius: 15px;" name="" id="" placeholder="Nội dung tìm  kiếm......."[(ngModel)]="key">
             </div>
             <div class="col-auto">
-                <i class="fas fa-search"></i>
+                <i class="fas fa-search" (click)="redict()"></i>
             </div>
         </div>
     </div>
 </header>
-<nav class="navbar navbar-expand-lg sticky-top navbar-light p-0">
+<nav class="navbar navbar-expand-lg sticky-top navbar-light p-0 shadow">
     <div class="container navigation">
-      <a class="navbar-brand" href="#">
-          <span>
-            <i class="fas fa-home "></i>
+      <a class="navbar-brand">
+          <span (click) = "navigationHome()" style="cursor: pointer;">
+            <i class="fas fa-home text-white"></i>
           </span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,56 +27,56 @@
       <div class="collapse navbar-collapse d-flex justify-content-center align-items-center" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Thế giới</a>
+            <a class="nav-link active" aria-current="page" (click) = "navigationOtherNews('Thế giới')">Thế giới</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Thời sự</a>
+            <a class="nav-link" (click) = "navigationOtherNews('Thời sự')">Thời sự</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Kinh doanh</a>
+            <a class="nav-link" (click) = "navigationOtherNews('Kinh doanh')">Kinh doanh</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Startup</a>
+            <a class="nav-link" (click) = "navigationOtherNews('Startup')">Startup</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Giải trí</a>
+            <a class="nav-link"(click) = "navigationOtherNews('Giải trí')">Giải trí</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Thể thao</a>
+            <a class="nav-link" (click) = "navigationOtherNews('Thể thao')">Thể thao</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pháp luật</a>
+            <a class="nav-link" (click) = "navigationOtherNews('Pháp luật')">Pháp luật</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Giáo dục</a>
+            <a class="nav-link" (click) = "navigationOtherNews('Giáo dục')">Giáo dục</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Tin mới nhất</a>
+            <a class="nav-link"(click) = "navigationOtherNews('Tin mới nhất')">Tin mới nhất</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Tin nổi bật</a>
+            <a class="nav-link" (click) = "navigationOtherNews('Tin nổi bật')">Tin nổi bật</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sức khỏe </a>
+            <a class="nav-link" (click) = "navigationOtherNews('Sức khỏe')">Sức khỏe </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Đời sống</a>
+            <a class="nav-link"(click) = "navigationOtherNews('Đời sống')">Đời sống</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Du lịch </a>
+            <a class="nav-link"(click) = "navigationOtherNews('Du lịch')">Du lịch </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Khoa học</a>
+            <a class="nav-link" (click) = "navigationOtherNews('Khoa học')">Khoa học</a>
           </li>
           <li class="nav-item position-relative news-other-hover" style="border-right: 1px solid white">
-            <a class="nav-link" href="#">Tin tức khác</a>
-            <ul class="position-absolute news-other p-0">
-                <li><a href="">Số hóa</a></li>
-                <li><a href="">Xe</a></li>
-                <li><a href="">Ý kiến</a></li>
-                <li><a href="">Tâm sự</a></li>
-                <li><a href="">Cười</a></li>
-                <li><a href="">Tin xem nhiều</a></li>
+            <a class="nav-link">Tin tức khác</a>
+            <ul class="position-absolute news-other p-0 shadow">
+                <li><a (click) = "navigationOtherNews('Số hóa')">Số hóa</a></li>
+                <li><a (click) = "navigationOtherNews('Xe')">Xe</a></li>
+                <li><a (click) = "navigationOtherNews('Ý kiến')">Ý kiến</a></li>
+                <li><a (click) = "navigationOtherNews('Tâm sự')">Tâm sự</a></li>
+                <li><a (click) = "navigationOtherNews('Cười')">Cười</a></li>
+                <li><a (click) = "navigationOtherNews('Tin xem nhiều')">Tin xem nhiều</a></li>
             </ul>
           </li>
          

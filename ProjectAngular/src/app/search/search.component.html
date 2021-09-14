@@ -1,0 +1,121 @@
+<div class="containers third row">
+    <div class="main_content col-8">
+        <div class="header-search row">
+            <h4>Tìm Kiếm</h4>
+            <div class="input col-7 row ">
+                <div class="alpha col-11">
+                    <input type="text" class="form-control align-self-center" id="search" name="username"
+                        placeholder="Nhập từ khóa tìm kiếm" [(ngModel)]="key">
+                </div>
+                <div class="beta col-1">
+                    <button (click)="redict()"><i class="fas fa-search"></i></button>
+
+                </div>
+            </div>
+            <div class="cate col-4 row">
+                <div class="col-5" style="padding: 5px 0px;">
+                    <p style="padding: 0px;margin: 0px;">Hạng mục:</p>
+                </div>
+                <div class="col-7"  >
+                    <select class="form-control " [(ngModel)]="cate">
+                        <option value="all">Tất cả</option>
+                        <option disabled class="hr"> </option>
+                        <option value="the-gioi"> Thế giới </option>
+                        <option disabled class="hr"> </option>
+                        <option value="kinh-doanh"> Kinh doanh </option>
+                        <option disabled class="hr"> </option>
+                        <option value="startup"> StartUp</option>
+                        <option disabled class="hr"> </option>
+                        <option value="giai-tri"> Giải Trí</option>
+                        <option disabled class="hr"> </option>
+                        <option value="the-thao"> Thể thao</option>
+                        <option disabled class="hr"> </option>
+                        <option value="phap-luat"> Pháp luật</option>
+                        <option disabled class="hr"> </option>
+                        <option value="giao-duc"> Giáo dục</option>
+                        <option disabled class="hr"> </option>
+                        <option value="suc-khoe"> Sức khỏe</option>
+                        <option disabled class="hr"> </option>
+                        <option value="doi-song"> Đời sống</option>
+                        <option disabled class="hr"> </option>
+                        <option value="du-lich"> Du lịch</option>
+                        <option disabled class="hr"> </option>
+                        <option value="khoa-hoc"> Khoa học</option>
+                        <option disabled class="hr"> </option>
+                        <option value="so-hoa"> Số hóa</option>
+                        <option disabled class="hr"> </option>
+                        <option value="xe"> Xe</option>
+                        <option disabled class="hr"> </option>
+                        <option value="y-kien"> Ý kiến</option>
+                        <option disabled class="hr"> </option>
+                        <option value="tam-su"> Tâm sự</option>
+                        <option disabled class="hr"> </option>
+                        <option value="cuoi"> Cười</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="news_you_need_to_know">
+            <div class="list_news">
+                <h4>kết quả tìm kiếm</h4>
+                <hr />
+                <p>{{ketqua}}</p>
+                <div class="news" *ngFor="let new of dataSearch">
+                    <div class="news_item row">
+                        <div class="news_image col-4">
+                            <img src={{new.image}} width="100%" height="auto" (click)="redict1(new.link)">
+                        </div>
+                        <div class="news_content col-8">
+                            <p class="title_news_item" (click)="redict1(new.link)">{{new.title}}</p>
+                            <p class="description_item" (click)="redict1(new.link)">{{new.description}}</p>
+                        </div>
+                    </div>
+                    <hr />
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="right_content col">
+        <div class="content">
+            <div class="area_news_newest">
+                <div class="list_news">
+                    <h6>mới nhất</h6>
+                    <hr />
+                    <div class="news" *ngFor ="let new of dataNew">
+                        <div class="news_item row">
+                            <div class="news_image col-4">
+                                <img src={{new.image}}
+                                    width="100%" height="auto"(click)="redict1(new.link)">
+    
+                            </div>
+                            <div class="news_content col-8">
+                                <p class="title_news_item"(click)="redict1(new.link)">{{new.title}}</p>
+                                <p class="date_item">{{new.date}}</p>
+                            </div>
+    
+    
+                        </div>
+            
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="area">
+                <img src="assets/baner/banner_3.jpg" width="60%" height="auto">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
