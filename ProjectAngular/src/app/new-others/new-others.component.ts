@@ -3,7 +3,9 @@ import { Item } from '../model/item';
 import { PaginatorService } from '../paginator-service/paginator.service';
 import { HttpService } from '../service/http.service';
 import { TitleService } from '../title-service/title.service';
+
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-new-others',
@@ -11,6 +13,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./new-others.component.css']
 })
 export class NewOthersComponent implements OnInit {
+
   listItem: Item[] = [];
   title?: string
   listItemFromComponentPaginator: Item[] = []
