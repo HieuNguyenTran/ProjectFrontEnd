@@ -28,7 +28,7 @@ name ="";
        const content = $(".fck_detail").html();
        const author = $(".author_mail").html();
       
-    
+      
          data.push({
            date,
            title,

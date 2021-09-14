@@ -18,7 +18,14 @@ import { ContactComponent } from './contact/contact.component';
 import { Data_RSS } from './Data_RSS';
 import { Data_Crawl } from './Data_Crawl';
 import {HttpClientModule} from '@angular/common/http';
+import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
+import { PolicyComponent } from './policy/policy.component';
+import { RouterModule, Routes } from '@angular/router';
+import { NewOthersComponent } from './new-others/new-others.component';
+import { PaginatorComponent } from './paginator/paginator.component';
 
 
 const routes: Routes  = [
@@ -38,7 +45,10 @@ const routes: Routes  = [
     PaginatorComponent,
     
     DetailedNewsComponent,
-    ContactComponent
+
+    ContactComponent,
+    SearchComponent,
+
 
   ],
   imports: [
@@ -46,8 +56,9 @@ const routes: Routes  = [
     AppRoutingModule,
 
     HttpClientModule,
-    RouterModule.forRoot(routes),
-    
+    FormsModule,
+    RouterModule.forRoot(routes,{scrollPositionRestoration: 'enabled'})
+
   ],
   providers: [
     Data_RSS,

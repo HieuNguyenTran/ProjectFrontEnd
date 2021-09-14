@@ -62,3 +62,6 @@ header{
 .news-other li:hover{
     background: #2b94a5;;
 }
+ul li a{
+    cursor:  pointer ;
+}

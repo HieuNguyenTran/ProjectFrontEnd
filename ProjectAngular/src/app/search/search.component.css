@@ -1,0 +1,170 @@
+.containers.third{
+    margin: 50px 20px 0px 150px;
+}
+.containers.third .main_content .header-search .input .alpha input{
+    border: none;
+    width: 100%;
+    outline: none;
+    outline-width: 0;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    padding: auto ;
+    margin: auto;
+}
+.containers.third .main_content .header-search .input .alpha,.beta{
+  padding: 0px;
+}
+.containers.third .main_content .header-search {
+
+    background-color: #FFFFFF;
+    margin-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(47,161,179,0.72); 
+    box-shadow: 0px 0px 5px 2px rgba(47,161,179,0.72);
+}
+.containers.third .main_content .header-search h4{
+  color: #2FA1B3;
+}
+.containers.third .main_content .header-search .input {
+    margin-left: 20px;
+    padding: 0px;
+}
+.containers.third .main_content .header-search .cate .form-control{
+    padding: auto 0px;
+    outline: none;
+    outline-width: 0;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+
+ 
+}
+ 
+    select> option.hr{
+        font-size: 0.005em;
+        background-color: #2fa1b375;
+        
+       }
+
+.containers.third .main_content .header-search .cate {
+    margin-left: 10px;
+   text-align: center;
+   padding: 0px;
+}
+.containers.third .main_content .header-search .input .beta button{
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    
+}
+.containers.third .main_content .header-search .input .beta .fas{
+    margin: auto;
+    
+}
+.containers.third .main_content .header-search .input {
+    border: 1px solid rgba(17, 17, 17, 0.363);
+    border-radius: 5px;
+    
+}
+.containers.third .main_content .header-search .input .alpha input:focus{
+    border: none;
+    outline: none;
+}
+.containers.third .main_content .news_you_need_to_know .list_news {
+    padding: 20px;
+}
+
+.containers.third .main_content .news_you_need_to_know .list_news h4, hr {
+    text-transform: uppercase;
+    color: #2FA1B3;
+}
+
+.containers.third .main_content .news_you_need_to_know .list_news .news img {
+   
+    cursor: pointer;
+}
+.containers.third .main_content .news_you_need_to_know .list_news .news .news_content .title_news_item {
+    color: #111;
+    padding: 0px 0px 0px 0px;
+    font-weight: 400;
+    font-size: 23px;
+     cursor: pointer;
+}
+
+.containers.third .main_content .news_you_need_to_know .list_news .news .news_content .description_item {
+    color: #111;
+    padding: 0px 0px 0px 0px;
+    cursor: pointer;
+}
+
+.containers.third .main_content .news_you_need_to_know .list_news .news hr {
+    margin: 15px 0px 15px 0px;
+    width: 100%;
+    size: 2px;
+}
+
+.right_content {
+    padding: 50px 0px 0px 30px;
+}
+
+
+
+
+.containers.third .right_content .content {
+    position: sticky;
+    position: -webkit-sticky;
+    top:50px;
+  
+}
+.containers.third .right_content .area_news_newest{
+    width: 60%;
+    -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.11);
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.11);
+    background-color: #FFFFFF;
+    
+}
+.containers.third .right_content .area_news_newest .list_news {
+    padding: 10px;
+}
+.containers.third .right_content .area_news_newest .list_news h6, hr{
+    text-transform: uppercase;
+    color: #2FA1B3;
+}
+.containers.third .right_content .area_news_newest .list_news .news .news_item{
+    height: 100%;
+    padding-bottom: 20px;
+}
+.containers.third .right_content .area_news_newest .list_news .news .news_item img{
+   cursor: pointer;
+}
+.containers.third .right_content .area_news_newest .list_news .news .news_content .title_news_item{
+    color: #111;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.containers.third .right_content .area_news_newest .list_news .news .news_content .date_item{
+    color: #111;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    font-size: 10px;
+  
+}
+.containers.third .right_content .area_news_newest .list_news .news hr{
+    margin: 15px 0px 15px 0px;
+    width: 100%;
+    size: 2px;
+
+}
+
+
+.containers.third .right_content .area{
+    
+    margin:  30px 0px 50px 0px;
+    
+}

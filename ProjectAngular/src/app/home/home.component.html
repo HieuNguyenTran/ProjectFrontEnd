@@ -6,26 +6,32 @@
           <div *ngFor = "let item of listItem1" class="col-12 ">
             <div  class="row">
               <div  class="col-5 hidden-hover-image"> <img src="{{item.thumbnail}}" class="img-fluid hover-image"
-                  alt="" style="height: 100%;"></div>
+
+                  alt="" style="height: 100%;" (click)="redict(item.link)"></div>
               <div class="col-7">
-                <h3>{{item.title}}</h3>
-                <p class="mt-3">{{item.content}}</p>
+                <h3 (click)="redict(item.link)">{{item.title}}</h3>
+                <p class="mt-3"(click)="redict(item.link)">{{item.content}}</p>
+
               </div>
             </div>
           </div>
           <div class="col-12 mt-4">
             <div class="row">
               <div *ngFor = "let item of item1 " class="col-4">
-                <h6 class="mb-3">{{item.title}}</h6>
-                <p class="text-description">
+
+                <h6 class="mb-3"(click)="redict(item.link)">{{item.title}}</h6>
+                <p class="text-description"(click)="redict(item.link)">
+
                   {{item.content}}
                   </p>
 
               </div>
              
               <div *ngFor = "let item of listItem2 " class="col-4 content">
-                <h6 class="mb-3">{{item.title}}</h6>
-                <p class="text-description">
+
+                <h6 class="mb-3"(click)="redict(item.link)">{{item.title}}</h6>
+                <p class="text-description"(click)="redict(item.link)">
+
                   {{item.content}}
                   </p>
 
@@ -36,15 +42,17 @@
           </div>
         </div>
         <div *ngFor="let item of listItem3" class="row mt-3 list-content pt-3 pb-2  ps-3 rounded shadow-sm">
-          <h5 class="mb-4"> {{item.title}}</h5>
+
+          <h5 class="mb-4"(click)="redict(item.link)"> {{item.title}}</h5>
           <div class="col-12">
             <div class="row">
               <div class="col-4  hidden-hover-image">
-                <img src="{{item.thumbnail}}" class="img-fluid hover-image" alt="">
+                <img src="{{item.thumbnail}}" class="img-fluid hover-image" alt=""(click)="redict(item.link)">
 
               </div>
               <div class="col-8  text-list-description">
-                <p>{{item.content}} </p>
+                <p (click)="redict(item.link)">{{item.content}} </p>
+
               </div>
             </div>
           </div>
@@ -62,10 +70,12 @@
           <div *ngFor = "let item of listItemNewsALotOf" class="col-12 mt-4 ps-5">
             <div class="row ps-2 pt-3 pb-3 content-hot rounded shadow-sm">
               <div class="col-5  hidden-hover-image">
-                <img src="{{item.thumbnail}}" alt="" style="height: 100%;" class="img-fluid hover-image">
+
+                <img src="{{item.thumbnail}}" alt="" style="height: 100%;" class="img-fluid hover-image"(click)="redict(item.link)">
               </div>
               <div class="col-7">
-                <p class="text-description"> 
+                <p class="text-description"(click)="redict(item.link)"> 
+
                   {{item.content}}
                 </p>
               </div>
