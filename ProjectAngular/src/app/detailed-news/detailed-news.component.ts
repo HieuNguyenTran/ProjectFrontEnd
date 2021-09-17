@@ -19,35 +19,37 @@ export class DetailedNewsComponent implements OnInit {
   urlNew="https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fvnexpress.net%2Frss%2Ftin-moi-nhat.rss&api_key=ttgzwkhbjdb7b0fbchak4uscdfzeov7u2psoyals&count=4";
   urlPopu="https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fvnexpress.net%2Frss%2Ftin-noi-bat.rss&api_key=ttgzwkhbjdb7b0fbchak4uscdfzeov7u2psoyals&count=6";
   urlNeed="https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fvnexpress.net%2Frss%2Ftin-xem-nhieu.rss&api_key=ttgzwkhbjdb7b0fbchak4uscdfzeov7u2psoyals&count=17";
-
-  constructor(private data_R: Data_RSS, private data_C: Data_Crawl,private route: ActivatedRoute,private router: Router) { 
+  name1="";
+  constructor(private data_R: Data_RSS, private data_C: Data_Crawl,private route: ActivatedRoute,private router: Router) {
    // route.params.subscribe(val => {
       // put the code from `ngOnInit` here
    // });
-   
-    route.params.subscribe(params => { 
+
+    route.params.subscribe(params => {
       this.dataNew =[];
       this.dataPopu=[];
       this.dataNeed =[];
       this.dataNews =[];
       this.name = params['name'];
       this.dataNews= data_C.getData(this.name);
-
+     // this.name1="https://vnexpress.net/"+this.name;
     data_R.getData(this.urlNew)
     .subscribe(value => {
       for (let item of value['items']) {
         if (item["link"].indexOf("html")!=-1){
-          this.dataNew.push({title: item["title"], description:  data_R.splitString(item["description"],"</a>"), image: item["thumbnail"],date: data_R.convertDate(item["pubDate"]),link: data_R.getParam(item["link"])});
-        } 
-       
+          this.dataNew.push({title: item["title"], description:  data_R.splitString(item["description"],"</a>"),
+            image: item["thumbnail"],date: data_R.convertDate(item["pubDate"]),link: data_R.getParam(item["link"])});
+        }
+
       }
     });
 
     data_R.getData(this.urlPopu)
     .subscribe(value => {
       for (let item of value['items']) {
-        this.dataPopu.push({title: item["title"], description:  data_R.splitString(item["description"],"</a>"), image: item["thumbnail"],date:  data_R.convertDate(item["pubDate"]),link:data_R.getParam(item["link"])});
-       
+        this.dataPopu.push({title: item["title"], description:  data_R.splitString(item["description"],"</a>"),
+          image: item["thumbnail"],date:  data_R.convertDate(item["pubDate"]),link:data_R.getParam(item["link"])});
+
       }
     });
 
@@ -55,17 +57,25 @@ export class DetailedNewsComponent implements OnInit {
     .subscribe(value => {
       for (let item of value['items']) {
         if (item["link"].indexOf("html")!=-1){
-          this.dataNeed.push({title: item["title"], description:  data_R.splitString(item["description"],"</a>"), image: item["thumbnail"],date: data_R.convertDate(item["pubDate"]),link: data_R.getParam(item["link"])});
-        } 
+          this.dataNeed.push({title: item["title"], description:  data_R.splitString(item["description"],"</a>"),
+            image: item["thumbnail"],date: data_R.convertDate(item["pubDate"]),link: data_R.getParam(item["link"])});
+        }
       }
     });
   });
 
-   
+
   }
   redict(link: String){
-    
+
     this.router.navigate(["/detailNews",link]);
+  }
+  checkName(): boolean{
+    if(this.name.endsWith("html"))
+    return true;
+    else{
+
+    return false;}
   }
   ngOnInit(): void {
   }
