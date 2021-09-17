@@ -1,6 +1,7 @@
 <div class="containers first row">
     <div class="main_content col-8">
-
+        <ng-container *ngIf = "checkName() ; then show1 else iframe"></ng-container>
+        <ng-template #show1>
         <div class="detailed__news">
             <div class="new_content">
                 <h2 class="title_new">{{dataNews[0].title}}</h2>
@@ -15,6 +16,10 @@
             </div>
 
         </div>
+        </ng-template>
+        <ng-template #iframe>
+            <iframe width="100%" height="100%" src="https://vnexpress.net/covid-19%2Fcovid-19-viet-nam"></iframe>
+        </ng-template>
     </div>
     <div class="right_content col-4">
         <div class="banner_adv">

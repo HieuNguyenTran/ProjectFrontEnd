@@ -180,13 +180,11 @@ export class PaginatorComponent implements OnInit {
         items.forEach((item, index) => {
           let substring = item.content.split("</a>")
           item.content = substring[1]
-
            //toDetail
            var data = item.link.split("net/",2);
            item.link = data[1];
            
             //end toDetail
-
           this.paginator.listAllItem.push(item)
 
         })
